@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTC Spacing Calculator | AWP Safety</title>
+    <meta name="description" content="MUTCD-compliant TTC work zone spacing calculator with 840 pre-calculated scenarios for FL, TN, NC, SC, GA.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sop-styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>AWP Safety</h1>
+                <p class="tagline">TTC Work Zone Spacing Calculator</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="calculator-intro">
+            <h2>MUTCD-Compliant Spacing Calculator</h2>
+            <p>Calculate sign distances, taper length, buffer space, and device quantities for temporary traffic control work zones. Based on 840 pre-calculated scenarios covering FL, TN, NC, SC, and GA.</p>
+        </section>
+
+        <section class="calculator-form">
+            <form id="spacingForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="speed">Posted Speed Limit *</label>
+                        <select id="speed" name="speed" required>
+                            <option value="">Select speed...</option>
+                            <option value="25">25 mph</option>
+                            <option value="30">30 mph</option>
+                            <option value="35">35 mph</option>
+                            <option value="40">40 mph</option>
+                            <option value="45">45 mph</option>
+                            <option value="50">50 mph</option>
+                            <option value="55">55 mph</option>
+                            <option value="60">60 mph</option>
+                            <option value="65">65 mph</option>
+                            <option value="70">70 mph</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="roadType">Road Type *</label>
+                        <select id="roadType" name="roadType" required>
+                            <option value="">Select road type...</option>
+                            <option value="2-lane-2-way">2-Lane, 2-Way (TA-17)</option>
+                            <option value="multi-lane-undivided">Multi-Lane Undivided</option>
+                            <option value="multi-lane-divided">Multi-Lane Divided</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State *</label>
+                        <select id="state" name="state" required>
+                            <option value="">Select state...</option>
+                            <option value="FL">Florida (FL)</option>
+                            <option value="TN">Tennessee (TN)</option>
+                            <option value="NC">North Carolina (NC)</option>
+                            <option value="SC">South Carolina (SC)</option>
+                            <option value="GA">Georgia (GA)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Work Duration *</label>
+                        <select id="duration" name="duration" required>
+                            <option value="">Select duration...</option>
+                            <option value="short-term">Short-term (&lt; 1 hour)</option>
+                            <option value="intermediate">Intermediate (1-24 hours)</option>
+                            <option value="long-term">Long-term (&gt; 24 hours)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="control">Traffic Control Method *</label>
+                        <select id="control" name="control" required>
+                            <option value="">Select method...</option>
+                            <option value="flagger">Flagger (2-lane only)</option>
+                            <option value="AFAD">AFAD (2-lane only)</option>
+                            <option value="none">Signs Only (multi-lane)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="workArea">Work Area Length (feet)</label>
+                        <input type="number" id="workArea" name="workArea" min="100" max="10000" value="500" placeholder="500">
+                        <small>Optional: For cone quantity estimation (default: 500 ft)</small>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Calculate Spacing</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="results" class="results hidden">
+            <h2>Calculation Results</h2>
+
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>Advance Warning Signs</h3>
+                    <div class="result-item">
+                        <span class="label">Sign A (furthest upstream):</span>
+                        <span class="value" id="signA">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Sign B (middle):</span>
+                        <span class="value" id="signB">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Sign C (closest to work):</span>
+                        <span class="value" id="signC">-</span>
+                    </div>
+                    <p class="note">Distances measured from start of work area</p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Taper & Buffer</h3>
+                    <div class="result-item">
+                        <span class="label">Taper Length:</span>
+                        <span class="value" id="taperLength">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Buffer Space:</span>
+                        <span class="value" id="bufferSpace">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Cone Spacing (taper):</span>
+                        <span class="value" id="coneSpacingTaper">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Cone Spacing (tangent):</span>
+                        <span class="value" id="coneSpacingTangent">-</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>Equipment Requirements</h3>
+                    <div class="result-item">
+                        <span class="label">Device Type:</span>
+                        <span class="value" id="deviceType">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Estimated Quantity:</span>
+                        <span class="value" id="deviceQuantity">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Arrow Board Required:</span>
+                        <span class="value" id="arrowBoard">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">TMA Required:</span>
+                        <span class="value" id="tmaRequired">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="label">Minimum Crew Size:</span>
+                        <span class="value" id="crewSize">-</span>
+                    </div>
+                </div>
+
+                <div class="result-card full-width">
+                    <h3>Signs Required</h3>
+                    <div id="signsRequired" class="signs-list">-</div>
+                </div>
+
+                <div class="result-card full-width state-notes" id="stateNotesCard" style="display: none;">
+                    <h3>⚠️ State-Specific Requirements</h3>
+                    <div id="stateNotes">-</div>
+                    <div id="stateSigns" style="margin-top: 10px;"></div>
+                    <div id="stateEquipment" style="margin-top: 10px;"></div>
+                </div>
+            </div>
+
+            <div class="disclaimer">
+                <h4>Important Notes:</h4>
+                <ul>
+                    <li>All calculations based on MUTCD 2023 standards</li>
+                    <li>Device quantities include 20% contingency</li>
+                    <li>Always verify current state requirements before work begins</li>
+                    <li>This calculator provides guidance only - not a substitute for proper training</li>
+                </ul>
+            </div>
+
+            <div class="sop-action-area">
+                <button id="generateSOPButton" class="btn btn-success" onclick="handleGenerateSOP()" style="display: none;">
+                    📋 Generate Complete Step-by-Step SOP
+                </button>
+                <p class="sop-description">Generate a comprehensive, printable Standard Operating Procedure customized for this specific configuration</p>
+            </div>
+        </section>
+
+        <section id="sop" class="sop-container hidden">
+            <div class="sop-actions no-print">
+                <button onclick="printSOP()" class="btn btn-primary">🖨️ Print SOP</button>
+                <button onclick="hideSOPSection()" class="btn btn-secondary">✕ Close</button>
+            </div>
+            <div id="sopContent"></div>
+        </section>
+
+        <section id="error" class="error-message hidden">
+            <p>⚠️ <span id="errorText">Error loading scenario data</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AWP Safety. MUTCD-compliant TTC spacing calculator.</p>
+            <p class="footer-note">Generated from 840 pre-calculated scenarios. Data current as of November 2025.</p>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="calculator.js"></script>
+    <script src="sop-generator.js"></script>
+</body>
+</html>

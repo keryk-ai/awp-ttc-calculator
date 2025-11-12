@@ -1,0 +1,355 @@
+{
+  "checklistId": "ttc-breakdown-2lane",
+  "title": "2-Lane Breakdown Sequence",
+  "description": "MOST DANGEROUS PHASE - Maximum vigilance required. CRITICAL: Signs WITH traffic (same as setup), Cones AGAINST traffic (OPPOSITE of setup), Vehicle in reverse during cone removal.",
+  "sections": [
+    {
+      "id": "critical-warnings",
+      "title": "⚠️ CRITICAL DIFFERENCES FROM SETUP",
+      "items": [
+        {
+          "id": "warning-signs",
+          "label": "SIGNS: Remove WITH traffic (same direction as installation)",
+          "critical": true
+        },
+        {
+          "id": "warning-cones",
+          "label": "CONES: Remove AGAINST traffic (OPPOSITE of installation)",
+          "critical": true
+        },
+        {
+          "id": "warning-vehicle",
+          "label": "VEHICLE: Operates in REVERSE during cone removal",
+          "critical": true
+        },
+        {
+          "id": "warning-flagging",
+          "label": "FLAGGING: Continues until ALL cones removed",
+          "critical": true
+        },
+        {
+          "id": "warning-danger",
+          "label": "MOST DANGEROUS PHASE: Last cones provide least protection",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-0-prerequisites",
+      "title": "Phase 0: Prerequisites (Before Breakdown Begins)",
+      "items": [
+        {
+          "id": "work-ceased",
+          "label": "ALL work activities ceased - no ongoing work",
+          "critical": true
+        },
+        {
+          "id": "workers-out",
+          "label": "ALL workers out of roadway - in safe location",
+          "critical": true
+        },
+        {
+          "id": "tools-removed",
+          "label": "ALL tools removed from work area",
+          "critical": true
+        },
+        {
+          "id": "vehicles-moved",
+          "label": "Work vehicles moved outside closure to protected area",
+          "critical": true
+        },
+        {
+          "id": "observer-assigned",
+          "label": "Qualified observer assigned - dedicated role",
+          "critical": true
+        },
+        {
+          "id": "radios-checked",
+          "label": "Radios checked - functional comms",
+          "critical": true
+        },
+        {
+          "id": "whistles-accessible",
+          "label": "Storm whistles accessible - ready for emergency",
+          "critical": true
+        },
+        {
+          "id": "escape-confirmed",
+          "label": "Escape routes confirmed - still clear",
+          "critical": true
+        },
+        {
+          "id": "traffic-assessed",
+          "label": "Traffic volumes assessed - not too heavy",
+          "critical": false
+        },
+        {
+          "id": "note-stop",
+          "label": "NOTE: DO NOT begin until work area completely clear",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-1-cease-clear",
+      "title": "Phase 1: End Work Activities and Clear Zone",
+      "items": [
+        {
+          "id": "complete-task",
+          "label": "Complete current task - safe stopping point",
+          "critical": false
+        },
+        {
+          "id": "put-tools",
+          "label": "Put tools in vehicle - all equipment secured",
+          "critical": false
+        },
+        {
+          "id": "move-equipment",
+          "label": "Move equipment to shoulder - safe area",
+          "critical": false
+        },
+        {
+          "id": "remove-personnel",
+          "label": "Remove personnel from lanes - ALL out",
+          "critical": true
+        },
+        {
+          "id": "vehicle-exits",
+          "label": "Work vehicle exits - parks outside termination taper",
+          "critical": false
+        },
+        {
+          "id": "maintain-lights",
+          "label": "Maintain amber lights - vehicle still visible",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "phase-2-flaggers",
+      "title": "Phase 2: Maintain Flagging During Removal",
+      "items": [
+        {
+          "id": "flagger-1-continues",
+          "label": "Flagger 1 continues at Approach A taper start - maintains control",
+          "critical": true
+        },
+        {
+          "id": "flagger-2-continues",
+          "label": "Flagger 2 continues at Approach B termination - coordinates",
+          "critical": true
+        },
+        {
+          "id": "radio-contact",
+          "label": "Maintain radio contact - both flaggers and crew",
+          "critical": true
+        },
+        {
+          "id": "flagger-2-prepares",
+          "label": "Flagger 2 prepares to transition - becomes removal worker",
+          "critical": false
+        },
+        {
+          "id": "note-continues",
+          "label": "NOTE: Flagging CRITICAL - continues until ALL cones removed",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-3-termination",
+      "title": "Phase 3: Remove Termination Taper Cones",
+      "items": [
+        {
+          "id": "flagger-1-holds",
+          "label": "Flagger 1 holds traffic - Approach A with STOP paddle",
+          "critical": true
+        },
+        {
+          "id": "flagger-2-stops",
+          "label": "Flagger 2 stops traffic - Approach B",
+          "critical": true
+        },
+        {
+          "id": "radio-call",
+          "label": "Flagger 2 radios: 'Approach B stopped, removing termination taper'",
+          "critical": false
+        },
+        {
+          "id": "walk-against",
+          "label": "Walk AGAINST traffic - toward work area, facing traffic",
+          "critical": true
+        },
+        {
+          "id": "pickup-cones",
+          "label": "Pickup termination cones - typically 6 cones",
+          "critical": false
+        },
+        {
+          "id": "max-3-cones",
+          "label": "Maximum 3 cones at a time - manageable weight",
+          "critical": false
+        },
+        {
+          "id": "carry-shoulder",
+          "label": "Carry to shoulder or load in truck",
+          "critical": false
+        },
+        {
+          "id": "face-traffic",
+          "label": "Face traffic while removing - continuous vigilance",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-4-tangent",
+      "title": "Phase 4: Remove Work Area and Buffer Cones (AGAINST TRAFFIC)",
+      "items": [
+        {
+          "id": "shadow-position",
+          "label": "Position shadow vehicle 50-100ft upstream of worker",
+          "critical": false
+        },
+        {
+          "id": "shadow-observer",
+          "label": "Shadow driver acts as observer - amber lights active",
+          "critical": true
+        },
+        {
+          "id": "worker-walks",
+          "label": "Removal worker walks AGAINST traffic - faces oncoming",
+          "critical": true
+        },
+        {
+          "id": "pickup-downstream",
+          "label": "Pickup cones working downstream",
+          "critical": false
+        },
+        {
+          "id": "max-3-tangent",
+          "label": "Maximum 3 cones at a time",
+          "critical": false
+        },
+        {
+          "id": "shadow-follows",
+          "label": "Shadow vehicle follows at worker pace - maintains 50-100ft distance",
+          "critical": false
+        },
+        {
+          "id": "observer-watch",
+          "label": "Qualified observer continuous watch - ready to signal danger",
+          "critical": true
+        },
+        {
+          "id": "note-danger",
+          "label": "NOTE: MAXIMUM DANGER - last cones provide least protection",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-5-taper",
+      "title": "Phase 5: Remove Transition Taper Cones (MOST DANGEROUS)",
+      "items": [
+        {
+          "id": "coordinate-flagger",
+          "label": "Coordinate with Flagger 1 - radio: 'removing taper cones now'",
+          "critical": true
+        },
+        {
+          "id": "flagger-controls",
+          "label": "Flagger holds or controls traffic as needed",
+          "critical": true
+        },
+        {
+          "id": "remove-against",
+          "label": "Remove taper AGAINST traffic - start upstream end",
+          "critical": true
+        },
+        {
+          "id": "work-downstream",
+          "label": "Work downstream toward work area",
+          "critical": false
+        },
+        {
+          "id": "shadow-very-close",
+          "label": "Shadow vehicle very close - 25-50ft protection",
+          "critical": true
+        },
+        {
+          "id": "escape-available",
+          "label": "Escape route continuously available - always ready",
+          "critical": true
+        },
+        {
+          "id": "whistle-ready",
+          "label": "Storm whistle ready - immediate danger use",
+          "critical": true
+        },
+        {
+          "id": "note-most-dangerous",
+          "label": "WARNING: MOST DANGEROUS PHASE - least protection remaining",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-6-signs",
+      "title": "Phase 6: Remove All Signs (WITH TRAFFIC)",
+      "items": [
+        {
+          "id": "remove-approach-a",
+          "label": "Remove signs Approach A - furthest upstream to downstream",
+          "critical": false
+        },
+        {
+          "id": "observer-required",
+          "label": "Qualified observer required throughout",
+          "critical": true
+        },
+        {
+          "id": "passenger-observes",
+          "label": "Passenger observes, driver retrieves",
+          "critical": false
+        },
+        {
+          "id": "remove-approach-b",
+          "label": "Remove signs Approach B - same sequence",
+          "critical": false
+        },
+        {
+          "id": "verify-retrieved",
+          "label": "Verify all equipment retrieved - nothing left behind",
+          "critical": false
+        },
+        {
+          "id": "drive-through",
+          "label": "Drive through former work area - final sweep",
+          "critical": false
+        },
+        {
+          "id": "verify-no-equipment",
+          "label": "Verify no equipment on roadway - complete clear",
+          "critical": false
+        },
+        {
+          "id": "verify-no-debris",
+          "label": "Verify no debris remaining - clean site",
+          "critical": false
+        },
+        {
+          "id": "radio-complete",
+          "label": "Radio: 'breakdown complete, zone clear' - final confirmation",
+          "critical": false
+        },
+        {
+          "id": "note-with-traffic",
+          "label": "NOTE: Signs removed WITH traffic (same direction as installation)",
+          "critical": false
+        }
+      ]
+    }
+  ]
+}

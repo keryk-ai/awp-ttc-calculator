@@ -1,0 +1,293 @@
+{
+  "checklistId": "ttc-setup-2lane",
+  "title": "2-Lane Setup Sequence (TA-17)",
+  "description": "15-step sequential setup procedure for 2-lane, 2-way roads with flagging operations. CRITICAL ORDER - follow steps in sequence.",
+  "sections": [
+    {
+      "id": "phase-0-prerequisites",
+      "title": "Phase 0: Prerequisites (Before Setup Begins)",
+      "items": [
+        {
+          "id": "pjsb",
+          "label": "PJSB completed - all crew members attended and documented",
+          "critical": true
+        },
+        {
+          "id": "equipment-inspected",
+          "label": "Equipment inspected - all items functional",
+          "critical": true
+        },
+        {
+          "id": "speed-confirmed",
+          "label": "Posted speed confirmed - determines spacing calculations",
+          "critical": true
+        },
+        {
+          "id": "escape-route",
+          "label": "Escape route identified - both approaches, clear, level ground",
+          "critical": true
+        },
+        {
+          "id": "whistle-signals",
+          "label": "Storm whistle signals agreed - 3 blasts = danger",
+          "critical": true
+        },
+        {
+          "id": "roles-assigned",
+          "label": "Roles assigned - driver, passenger, flagger A, flagger B",
+          "critical": false
+        },
+        {
+          "id": "shadow-vehicle",
+          "label": "Shadow vehicle ready - amber lights functional",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "phase-1-signs-a",
+      "title": "Phase 1: Install Advance Warning Signs - Approach A",
+      "items": [
+        {
+          "id": "park-sign-a",
+          "label": "Park at Sign A location (furthest upstream), amber lights ON",
+          "critical": false
+        },
+        {
+          "id": "don-ppe",
+          "label": "Both crew members don PPE, vests zipped",
+          "critical": true
+        },
+        {
+          "id": "passenger-exits",
+          "label": "Passenger exits first - acts as qualified observer",
+          "critical": true
+        },
+        {
+          "id": "passenger-positions",
+          "label": "Passenger positions 5-10 yards behind truck, facing traffic",
+          "critical": true
+        },
+        {
+          "id": "driver-stand",
+          "label": "Driver retrieves stand, setup on shoulder",
+          "critical": false
+        },
+        {
+          "id": "driver-sign-a",
+          "label": "Driver attaches Sign A (Road Work Ahead)",
+          "critical": false
+        },
+        {
+          "id": "both-return",
+          "label": "Both return to truck - passenger enters LAST",
+          "critical": true
+        },
+        {
+          "id": "drive-sign-b",
+          "label": "Drive to Sign B location per spacing calculation",
+          "critical": false
+        },
+        {
+          "id": "repeat-sign-b",
+          "label": "Repeat process for Sign B (One Lane Road Ahead)",
+          "critical": false
+        },
+        {
+          "id": "repeat-sign-c",
+          "label": "Repeat process for Sign C (Be Prepared to Stop)",
+          "critical": false
+        },
+        {
+          "id": "repeat-sign-d",
+          "label": "Repeat process for Sign D (Flagger Symbol)",
+          "critical": false
+        },
+        {
+          "id": "note-one-person",
+          "label": "NOTE: ONLY one person outside vehicle at a time",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-2-signs-b",
+      "title": "Phase 2: Install Advance Warning Signs - Approach B",
+      "items": [
+        {
+          "id": "drive-approach-b",
+          "label": "Drive to Approach B (opposite direction)",
+          "critical": false
+        },
+        {
+          "id": "repeat-installation",
+          "label": "Repeat sign installation - same sequence as Approach A",
+          "critical": false
+        },
+        {
+          "id": "verify-signs",
+          "label": "Verify all signs visible, upright, stable, retroreflective",
+          "critical": false
+        },
+        {
+          "id": "note-bilateral",
+          "label": "NOTE: BILATERAL setup - both approaches must be complete",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-3-flaggers",
+      "title": "Phase 3: Position Flaggers at Both Approaches",
+      "items": [
+        {
+          "id": "verify-observer",
+          "label": "Verify qualified observer present - MANDATORY",
+          "critical": true
+        },
+        {
+          "id": "verify-certified",
+          "label": "Verify flaggers certified - STOP/SLOW trained",
+          "critical": true
+        },
+        {
+          "id": "test-radios",
+          "label": "Test radios - functional comms for all crew",
+          "critical": true
+        },
+        {
+          "id": "test-whistles",
+          "label": "Test storm whistles - audible at distance",
+          "critical": true
+        },
+        {
+          "id": "confirm-escape",
+          "label": "Confirm escape routes - both approaches walkable",
+          "critical": true
+        },
+        {
+          "id": "flagger-a-position",
+          "label": "Flagger A positions at Approach A taper start",
+          "critical": false
+        },
+        {
+          "id": "flagger-b-position",
+          "label": "Flagger B positions at Approach B termination",
+          "critical": false
+        },
+        {
+          "id": "establish-flow",
+          "label": "Establish alternating flow - radio coordination",
+          "critical": false
+        },
+        {
+          "id": "note-observer",
+          "label": "NOTE: NEVER proceed without qualified observer",
+          "critical": true
+        }
+      ]
+    },
+    {
+      "id": "phase-4-taper",
+      "title": "Phase 4: Install Transition Taper Cones",
+      "items": [
+        {
+          "id": "position-vehicle",
+          "label": "Position vehicle at downstream end of taper, amber lights ON",
+          "critical": false
+        },
+        {
+          "id": "observer-active",
+          "label": "Qualified observer active - driver or dedicated",
+          "critical": true
+        },
+        {
+          "id": "first-cone",
+          "label": "Place first cone at taper point (closest to work)",
+          "critical": false
+        },
+        {
+          "id": "work-upstream",
+          "label": "Work upstream - vehicle in reverse",
+          "critical": false
+        },
+        {
+          "id": "cone-spacing",
+          "label": "Place cones at spacing: 10ft (25-35mph), 15ft (40-50mph), 20ft (55-70mph)",
+          "critical": false
+        },
+        {
+          "id": "complete-taper",
+          "label": "Continue to upstream end - taper complete",
+          "critical": false
+        },
+        {
+          "id": "verify-transition",
+          "label": "Verify smooth transition - alignment correct",
+          "critical": false
+        },
+        {
+          "id": "note-calculator",
+          "label": "NOTE: Refer to spacing calculator for taper length",
+          "critical": false
+        }
+      ]
+    },
+    {
+      "id": "phase-5-buffer-work",
+      "title": "Phase 5: Install Buffer Space and Work Area Cones",
+      "items": [
+        {
+          "id": "buffer-cones",
+          "label": "Install buffer cones - distance: 250ft to 820ft per speed",
+          "critical": false
+        },
+        {
+          "id": "spacing-40ft",
+          "label": "Spacing 40ft - tangent section, both sides",
+          "critical": false
+        },
+        {
+          "id": "enclose-work",
+          "label": "Enclose work area perimeter as needed",
+          "critical": false
+        },
+        {
+          "id": "access-openings",
+          "label": "Leave equipment access openings",
+          "critical": false
+        },
+        {
+          "id": "walk-setup",
+          "label": "Walk entire setup - visual inspection",
+          "critical": false
+        },
+        {
+          "id": "verify-signs-final",
+          "label": "Verify all signs visible, upright, stable",
+          "critical": false
+        },
+        {
+          "id": "verify-cones-final",
+          "label": "Verify all cones upright, proper spacing",
+          "critical": false
+        },
+        {
+          "id": "radio-check-final",
+          "label": "Final radio check - all crew comms working",
+          "critical": true
+        },
+        {
+          "id": "escape-clear-final",
+          "label": "Confirm escape routes still clear - not blocked by equipment",
+          "critical": true
+        },
+        {
+          "id": "note-buffer-calc",
+          "label": "NOTE: Refer to spacing calculator for buffer distances",
+          "critical": false
+        }
+      ]
+    }
+  ]
+}
