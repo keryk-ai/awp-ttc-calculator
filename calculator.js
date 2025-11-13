@@ -87,6 +87,14 @@ function displayResults(scenario, formData) {
     document.getElementById('signB').textContent = `${scenario.sign_b_distance_ft} ft`;
     document.getElementById('signC').textContent = `${scenario.sign_c_distance_ft} ft`;
 
+    // Show Sign D only for flagger operations
+    if (scenario.sign_d_distance_ft && scenario.sign_d_distance_ft > 0) {
+        document.getElementById('signD').textContent = `${scenario.sign_d_distance_ft} ft`;
+        document.getElementById('signDRow').style.display = 'grid';
+    } else {
+        document.getElementById('signDRow').style.display = 'none';
+    }
+
     // Taper & Buffer
     document.getElementById('taperLength').textContent = `${scenario.taper_length_ft} ft`;
     document.getElementById('bufferSpace').textContent = `${scenario.buffer_space_ft} ft`;
@@ -180,24 +188,26 @@ function displaySignsRequired(scenario, formData) {
     const signs = [];
 
     if (formData.roadType === '2-lane-2-way') {
-        signs.push('Road Work Ahead (W20-1) - Qty: 2');
-        signs.push('One Lane Road Ahead (W20-4) - Qty: 2');
+        signs.push('Sign A: Road Work Ahead (W20-1) - Qty: 2');
+        signs.push('Sign B: One Lane Road Ahead (W20-4) - Qty: 2');
+        signs.push('Sign C: Be Prepared to Stop (W3-4) - Qty: 2');
 
         if (formData.control === 'flagger') {
-            signs.push('Flagger Ahead (W20-7) - Qty: 2');
-            signs.push('Be Prepared to Stop (W3-4) - Qty: 2');
+            signs.push('Sign D: Flagger Symbol (W20-7a) - Qty: 2');
         } else if (formData.control === 'AFAD') {
-            signs.push('AFAD Ahead - Qty: 2');
+            signs.push('Sign D: AFAD Ahead - Qty: 2');
         }
     } else {
         // Multi-lane
-        signs.push('Road Work Ahead (W20-1) - Qty: 1');
+        signs.push('Sign A: Road Work Ahead (W20-1) - Qty: 1');
 
         if (formData.roadType === 'multi-lane-divided') {
-            signs.push('Right Lane Closed Ahead (W20-5R) - Qty: 1');
+            signs.push('Sign B: Right Lane Closed Ahead (W20-5R) - Qty: 1');
         } else {
-            signs.push('Lane Closed Ahead (W20-5) - Qty: 1');
+            signs.push('Sign B: Lane Closed Ahead (W20-5) - Qty: 1');
         }
+
+        signs.push('Sign C: Merge Right (W4-1R) - Qty: 1');
     }
 
     // Add state-specific signs from scenario
